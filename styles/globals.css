@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  font-size: 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Suisse Intl', 'Metro Sans', 'Untitled Sans', 'Open Runde', 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+
+
+/* apply dark to header if body class is dark */
+
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.header {
+  /* position: relative; */
+  pointer-events: none;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    
+    
+  }
+}
+
+.dark {
+  .header {
+    &:before {
+    }
+  }
+  
+  .footer {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .5));
+  }
+}
+.card {
+  overflow: hidden;
+  border-radius: 18px;
+  position: relative;
+  
+  &:after {
+    content: '';
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 32px 16px #ffffffc6 inset;
+    position: absolute;
+    inset: 0;
+  }
+
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, .01),
+    rgba(255, 255, 255, .02),
+    rgba(255, 255, 255, .03),
+    rgba(255, 255, 255, .04),
+    rgba(255, 255, 255, .045),
+    rgba(255, 255, 255, .05),
+    rgba(255, 255, 255, .1),
+    rgba(255, 255, 255, .25)
+  );
+  pointer-events: none;
+}
+
+.work-card {
+  
+}
+
+.work-card:nth-of-type(even) {
+  transform: scale(1.02);
+  
+}
+
+.page-title {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    top: -1.5rem;
+    right: -0.75rem;
+    font-size: 1rem;
+    content: attr(data-count);
+    color: rgba(0, 0, 0, 0.45);
+  }
+}
+
+li {
+}
