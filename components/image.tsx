@@ -1,12 +1,9 @@
 "use client";
 
-import NextImage, { ImageProps as NextImageProps } from "next/image";
-import { useRef, useState } from "react";
-
 type ImageProps = {
   aspectRatio?: number
   color?: string
-} & NextImageProps
+} & React.ImgHTMLAttributes<HTMLImageElement>
 
 export const Image = ({src, alt, width, height, aspectRatio, color = 'red', ...props}: ImageProps) => {
   return (
