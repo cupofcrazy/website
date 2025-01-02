@@ -3,9 +3,7 @@ import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import { ThemeProvider } from 'next-themes'
-import { Scene } from "@/components/scene";
 import { Header } from "@/components/header";
-import { Nav } from "@/components/nav";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -31,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`antialiased text-base md:text-sm bg-white dark:bg-neutral-900`}
+        className={`antialiased text-base md:text-sm bg-white dark:bg-neutral-900 ${inter.className}`}
       >
         <ThemeProvider attribute="class">
           <Header />
@@ -40,7 +38,6 @@ export default function RootLayout({
               {children}
             </div>
           </main>
-          {/* <Nav /> */}
           <footer className="footer"></footer>
         </ThemeProvider>
       </body>
