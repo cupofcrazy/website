@@ -45,22 +45,22 @@ const components = {
       return <p className="text-neutral-800 dark:text-neutral-100">{children}</p>
     },
     h1: ({ children }: { children: string }) => {
-      return <h1 className="text-2xl text-neutral-900 dark:text-white">{children}</h1>
+      return <h1 className="text-2xl text-neutral-900 dark:text-white font-semibold">{children}</h1>
     },
     h2: ({ children }: { children: string }) => {
-      return <h2 className="text-lg text-neutral-900 dark:text-white">{children}</h2>
+      return <h2 className="text-lg text-neutral-900 dark:text-white font-semibold">{children}</h2>
     },
     h3: ({ children }: { children: string }) => {
-      return <h3 className="text-md text-neutral-900 dark:text-white">{children}</h3>
+      return <h3 className="text-md text-neutral-900 dark:text-white font-semibold">{children}</h3>
     },
     h4: ({ children }: { children: string }) => {
-      return <h4 className="text-sm text-neutral-900 dark:text-white">{children}</h4>
+      return <h4 className="text-sm text-neutral-900 dark:text-white font-semibold">{children}</h4>
     },
     h5: ({ children }: { children: string }) => {
-      return <h5 className="text-sm text-neutral-900 dark:text-white">{children}</h5>
+      return <h5 className="text-sm text-neutral-900 dark:text-white font-semibold">{children}</h5>
     },
     h6: ({ children }: { children: string }) => {
-      return <h6 className="text-sm text-neutral-900 dark:text-white">{children}</h6>
+      return <h6 className="text-sm text-neutral-900 dark:text-white font-semibold">{children}</h6>
     },
     blockquote: ({ children }: { children: string }) => {
       return <blockquote className="text-neutral-900 dark:text-white">{children}</blockquote>
